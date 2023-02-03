@@ -43,3 +43,35 @@ else if (mailList[3] === userEmail) {
 else {
     console.log('false')
 }
+
+
+// Gioco dei dadi
+// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
+
+// 1 Create 2 random numbers from 1 to 6
+
+// 2 CONDITION 
+    // IF random1 === random2
+    // ELSE IF random1 > random2 random1 win
+    // ELSE random2 win
+
+console.log('DICE GAME')
+
+const playerChoice = Math.round(Math.random() * 5 + 1)
+console.log(playerChoice, 'You')
+
+const pcChoice = Math.round(Math.random() * 5 + 1)
+console.log(pcChoice , 'PC')
+
+if (pcChoice === playerChoice) {
+    console.log('Draw')
+}
+
+else if (pcChoice > playerChoice) {
+    console.log('Pc Win')
+}
+
+else {
+    console.log('You Win')
+}
+
