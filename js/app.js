@@ -14,6 +14,8 @@
     // ELSE i stamp the other result
 
 
+
+console.log('EMAIL CHECK')
 // 1 Create Array
 const mailList = ['hello@gmail.com', 'world@gmail.com', 'lorem@gmail.com', 'ipsum@gmail.com']
 console.log(mailList)
@@ -22,27 +24,52 @@ console.log(mailList)
 const userEmail = prompt('Add your email')
 console.log(userEmail)
 
-// 3 CONDITION
-// IF user-email is taken = true
-if (mailList[0] === userEmail) {
-    console.log('true')
-}
+// Save this variable as result of the condition
+let emailTaken = ''
 
-else if (mailList[1] === userEmail) {
-    console.log('true')
-}
+// FOR CYCLE
+for (let i = 0; i < mailList.length; i++) {
 
-else if (mailList[2] === userEmail) {
-    console.log('true')
-}
+    // CONDITION
 
-else if (mailList[3] === userEmail) {
-    console.log('true')
+    // IF user-email already exist you get email is taken
+    if (mailList[i] === userEmail) {
+        
+        emailTaken = 'Email is already taken'
+
+        break
+    }
+
+    // ELSE user-email can be used you get you can use email
+    else {
+
+        emailTaken = 'You can use email'
+    }
+
 }
-// ELSE = false
-else {
-    console.log('false')
-}
+console.log(emailTaken)
+
+
+// // IF user-email is taken = true
+// if (mailList[0] === userEmail) {
+//     console.log('true')
+// }
+
+// else if (mailList[1] === userEmail) {
+//     console.log('true')
+// }
+
+// else if (mailList[2] === userEmail) {
+//     console.log('true')
+// }
+
+// else if (mailList[3] === userEmail) {
+//     console.log('true')
+// }
+// // ELSE = false
+// else {
+//     console.log('false')
+// }
 
 
 // Gioco dei dadi
